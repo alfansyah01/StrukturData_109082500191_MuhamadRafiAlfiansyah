@@ -399,11 +399,11 @@ int main(){
 
 ![Screenshot Output Unguided 3_2](Output/Soal3_2.png)
 
-pMembuat pola angka berdasarkan tinggi yang dimasukkan. Perulangan for digunakan untuk mengatur spasi dan susunan angka, kemudian tanda * diletakkan di bagian tengah setiap baris sehingga membentuk pola tertentu.  
+Membuat pola angka berdasarkan tinggi yang dimasukkan. Perulangan for digunakan untuk mengatur spasi dan susunan angka, kemudian tanda * diletakkan di bagian tengah setiap baris sehingga membentuk pola tertentu.  
 
 ## Kesimpulan
 
-...
+Saya mempelajari dasar dari c++ seperti perator aritmatika, percabangan, perulangan, struct, array, dan fungsi. Masih butuh penyesuaian dari semester sebelumnya yang menggunakan Go, apalagi di panggunaan operator dan penulisan sintaksnya yang beda. Dari praktikum ini saya jadi lebih bisa memahami tentang c++.
 
 ## Referensi
 
