@@ -77,12 +77,12 @@ int main(){
 
 ##### Output 1
 
-\!\[Screenshot Output Unguided 1\_1\](Output/Soal1_#1)
+![Screenshot Output Unguided 1_1](Output/Soal1_1.png)
 
 
 ##### Output 2
 
-\!\[Screenshot Output Unguided 1\_2\](Output/Soal1_#2)
+![Screenshot Output Unguided 1_2](Output/Soal1_2.png)
 
 penjelasan unguided 1
 
@@ -128,12 +128,12 @@ int main(){
 
 ##### Output 1
 
-\!\[Screenshot Output Unguided 2\_1\](Output/Soal2_#1)
+![Screenshot Output Unguided 2_1](Output/Soal2_1.png)
 
 
 ##### Output 2
 
-\!\[Screenshot Output Unguided 2\_2\](Output/Soal2_#2)
+![Screenshot Output Unguided 2_2](Output/Soal2_2.png)
 
 penjelasan unguided 2
 
@@ -172,12 +172,12 @@ int main(){
 
 ##### Output 1
 
-\!\[Screenshot Output Unguided 3\_1\](Output/Soal3_#1)
+![Screenshot Output Unguided 3_1](Output/Soal3_1.png)
 
 
 ##### Output 2
 
-\!\[Screenshot Output Unguided 3\_2\](Output/Soal3_#2)
+![Screenshot Output Unguided 3_2](Output/Soal3_2.png)
 
 penjelasan unguided 3
 

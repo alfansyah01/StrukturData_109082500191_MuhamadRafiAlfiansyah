@@ -1,4 +1,4 @@
-# Repository Praktikum Struktur Data" 
+# Repository Praktikum Struktur Data
 
 Nama : Muhamad Rafi Alfiansyah
 <br>NIM : 109082500191
