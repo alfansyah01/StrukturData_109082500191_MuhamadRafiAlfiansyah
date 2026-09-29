@@ -6,7 +6,7 @@ Muhamad Rafi Alfiansyah \- 109082500191
 
 ## Dasar Teori
 
-# A. Struktur
+A. Struktur
 
 ### 
 
