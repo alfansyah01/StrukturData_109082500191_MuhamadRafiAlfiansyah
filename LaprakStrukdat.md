@@ -8,29 +8,35 @@ Muhamad Rafi Alfiansyah \- 109082500191
 
 isi dengan penjelasan dasar teori disertai referensi jurnal (gunakan kurung siku \[\] untuk pernyataan yang mengambil refernsi dari jurnal). contoh : Linked list atau yang disebut juga senarai berantai adalah Salah satu bentuk struktur data yang berisi kumpulan data yang tersusun secara sekuensial, saling bersambungan, dinamis, dan terbatas\[1\]. Linked list terdiri dari sejumlah node atau simpul yang dihubungkan secara linier dengan bantuan pointer.
 
-A. ...
+A. Linked List
 
 ### 
 
-...
+Linked list atau senarai berantai adalah struktur data linear yang terdiri dari kumpulan node atau simpul yang saling terhubung menggunakan pointer. Berbeda dengan array, data pada linked list tidak harus disimpan pada lokasi memori yang berurutan. Setiap node memiliki bagian data untuk menyimpan nilai dan bagian pointer untuk menunjuk node berikutnya.
 
-#### 1\. ...
+#### 1\. Node merupakan elemen dasar pada linked list. Node digunakan untuk menyimpan data serta alamat node lain yang terhubung dengannya.
 
-#### 2\. ...
 
-#### 3\. ...
 
-B. ...
+#### 2\. Pointer adalah variabel yang menyimpan alamat memori. Pada linked list, pointer berfungsi untuk menghubungkan satu node dengan node berikutnya.
+
+#### 3\. Head merupakan pointer yang menunjuk pada node pertama dalam linked list. Head digunakan sebagai titik awal untuk melakukan penelusuran data.
+
+B. Operasi Linked List
 
 ### 
 
-...
+Operasi pada linked list dilakukan dengan memanfaatkan pointer untuk mengatur hubungan antar-node. Operasi tersebut meliputi penambahan data, penghapusan data, serta penelusuran data dari node awal sampai node terakhir.
 
-#### 1\. ...
+#### 1\. Penambahan node merupakan proses memasukkan node baru ke dalam linked list. Penambahan dapat dilakukan pada bagian awal, bagian akhir, atau pada posisi tertentu dengan mengubah pointer yang sesuai.
 
-#### 2\. ...
 
-#### 3\. ...
+
+#### 2\. Penghapusan node merupakan proses menghilangkan node dari linked list. Proses ini dilakukan dengan menghubungkan pointer dari node sebelum node yang dihapus ke node setelahnya.
+
+#### 3\. Traversal adalah proses mengunjungi atau menelusuri seluruh node pada linked list secara berurutan. Traversal dimulai dari node pertama atau head hingga mencapai node terakhir yang pointer-nya bernilai NULL.
+
+
 
 ## Guided
 
