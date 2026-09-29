@@ -6,21 +6,19 @@ Muhamad Rafi Alfiansyah \- 109082500191
 
 ## Dasar Teori
 
-isi dengan penjelasan dasar teori disertai referensi jurnal (gunakan kurung siku \[\] untuk pernyataan yang mengambil refernsi dari jurnal). contoh : Linked list atau yang disebut juga senarai berantai adalah Salah satu bentuk struktur data yang berisi kumpulan data yang tersusun secara sekuensial, saling bersambungan, dinamis, dan terbatas\[1\]. Linked list terdiri dari sejumlah node atau simpul yang dihubungkan secara linier dengan bantuan pointer.
-
-A. Linked List
+# A. Struktur
 
 ### 
 
-Linked list atau senarai berantai adalah struktur data linear yang terdiri dari kumpulan node atau simpul yang saling terhubung menggunakan pointer. Berbeda dengan array, data pada linked list tidak harus disimpan pada lokasi memori yang berurutan. Setiap node memiliki bagian data untuk menyimpan nilai dan bagian pointer untuk menunjuk node berikutnya.
+Struktur merupakan tipe data bentukan yang terdiri atas kumpulan variabel dalam satu nama. Setiap variabel di dalam struktur dapat memiliki tipe data yang berbeda. Struktur digunakan untuk mengelompokkan beberapa informasi yang saling berkaitan menjadi satu kesatuan.
 
-#### 1\. Node merupakan elemen dasar pada linked list. Node digunakan untuk menyimpan data serta alamat node lain yang terhubung dengannya.
+#### 1\. Struktur dideklarasikan menggunakan kata kunci struct, kemudian diikuti dengan nama struktur dan anggota-anggota yang terdapat di dalamnya.
 
 
 
-#### 2\. Pointer adalah variabel yang menyimpan alamat memori. Pada linked list, pointer berfungsi untuk menghubungkan satu node dengan node berikutnya.
+#### 2\. Setiap anggota struktur dapat memiliki tipe data yang berbeda, seperti int, float, char, atau tipe struktur lainnya.
 
-#### 3\. Head merupakan pointer yang menunjuk pada node pertama dalam linked list. Head digunakan sebagai titik awal untuk melakukan penelusuran data.
+#### 3\. Elemen pada struktur dapat diakses menggunakan operator titik (.), seperti data.nama atau data.nilai.
 
 B. Operasi Linked List
 
@@ -42,21 +40,237 @@ Operasi pada linked list dilakukan dengan memanfaatkan pointer untuk mengatur hu
 
 ### 1\. ...
 
-source code guided 1
+```C++
+#include <iostream>
+using namespace std;
+int main(){
+int W, X, Y; float Z;
+X = 7; Y = 3; W = 1;
+Z = (X + Y)/(Y + W);
+cout<< "Nilai z = " << Z << endl;
+return 0;
+}
+```
 
-penjelasan singkat guided 1
+Program menggunakan operator aritmatika dengan tanda kurung untuk mengatur urutan perhitungan dan menghasilkan nilai Z.
 
 ### 2\. ...
 
-source code guided 2
+```C++
+#include <iostream>
+using namespace std;
+int main(){
+int r = 10;
+int s;
+s=10 + ++r;
+cout<< "Nilai r= "<<r<<endl;
+cout<< "Nilai s= "<<s<<endl;
+return 0;
+}
+```
 
-penjelasan singkat guided 2
+Program menggunakan ++r, yaitu nilai r ditambah terlebih dahulu sebelum digunakan dalam perhitungan.
 
 ### 3\. ...
 
-source code guided 3
+```C++
+#include <iostream>
+#include <stdlib.h>
+using namespace std;
+int main(){
+int r = 10;
+int s;
+s=10 + r++;
+cout<< "Nilai r= "<<r<<endl;
+cout<< "Nilai s= "<<s<<endl;
+return 0;
+}
+```
 
-penjelasan singkat guided 3
+Program menggunakan r++, yaitu nilai r digunakan terlebih dahulu dalam perhitungan, kemudian nilainya ditambah.
+
+### 4\. ...
+
+```C++
+#include <iostream>
+using namespace std;
+int main(){
+double tot_pembelian, diskon;
+cout<<"total pembelian: Rp";
+cin>>tot_pembelian;
+diskon = 0;
+if(tot_pembelian >= 100000)
+diskon = 0.05*tot_pembelian;
+cout<<"besar diskon = Rp" <<diskon;
+}
+```
+
+Program menggunakan if untuk memberikan diskon sebesar 5% apabila total pembelian mencapai Rp100.000 atau lebih.
+
+### 5\. ...
+
+```C++
+#include <iostream>
+using namespace std;
+int main(){
+double tot_pembelian, diskon;
+cout<<"total pembelian: Rp";
+cin>>tot_pembelian;
+diskon = 0;
+if(tot_pembelian >= 100000)
+diskon = 0.05*tot_pembelian;
+else
+diskon = 0;
+cout<<"besar diskon = Rp" <<diskon;
+}
+```
+
+Program menggunakan if-else untuk menentukan diskon. Jika total pembelian memenuhi syarat, diberikan diskon 5%, jika tidak maka diskon bernilai 0.
+
+### 6\. ...
+
+```C++
+#include <iostream>
+using namespace std;
+int main(){
+int kode_hari;
+puts("Menentukan hari kerja/libur\n");
+puts("1=Senin 3=Rabu 5=Jumat 7=Minggu ");
+puts("2=Selasa 4=Kamis 6=Sabtu ");
+cin>>kode_hari;
+switch(kode_hari){
+case 1:
+case 2:
+case 3:
+case 4:
+case 5:
+cout<<"Hari Kerja"<<endl;
+break;
+case 6:
+case 7:
+cout<<"Hari Libur"<<endl;
+break;
+default:
+cout<<"Kode masukan salah!!!"<<endl;
+}
+return 0;
+}
+```
+
+Program menggunakan switch untuk menentukan keterangan hari berdasarkan kode. Kode 1–5 menunjukkan hari kerja, sedangkan 6–7 menunjukkan hari libur.
+
+### 7\. ...
+
+```C++
+#include <iostream>
+using namespace std;
+int main(){
+int jum;
+cout<<"jumlah perulangan: ";
+cin>>jum;
+for(int i=0; i<jum; i++){
+cout<<"saya pintar\n";
+}
+return 0;
+}
+```
+
+Program menggunakan for untuk mengulang perintah menampilkan tulisan sebanyak jumlah perulangan yang dimasukkan oleh pengguna.
+
+### 8\. ...
+
+```C++
+#include <iostream>
+using namespace std;
+int main(){
+int i=1;
+int jum;
+cout<<"masukan banyak baris: ";
+cin>>jum;
+while(i<=jum){
+cout<<"baris ke-"<<i<<endl;
+i++; 
+}
+return 0;
+}
+```
+
+Program menggunakan while untuk menampilkan nomor baris secara berulang selama kondisi i <= jum masih terpenuhi.
+
+### 9\. ...
+
+```C++
+#include <iostream>
+using namespace std;
+int main(){
+int i = 1;
+int jum;
+cin >> jum;
+do{
+cout << "baris ke-" <<(i+1)<<endl;
+i++;
+} while(i<jum);
+return 0;
+}
+```
+
+Program menggunakan do-while untuk menjalankan perintah terlebih dahulu, kemudian memeriksa kondisi perulangan pada bagian while.
+
+### 10\. ...
+
+```C++
+#include <iostream>
+#define MAX 5
+using namespace std;
+int main(){
+int i;
+struct data{
+char nama[40];
+int nilai;
+};
+data siswa[MAX];
+for(i=0; i<MAX; i++){
+cout<<"masukkan data ke-"<<i+1<<endl;
+cout<<"nama = ";
+cin>>siswa[i].nama;
+cout<<"nilai = ";
+cin>>siswa[i].nilai;
+}
+cout<<"\ndata siswa\n";
+cout<<"=======";
+for(i=0; i<MAX; i++){
+cout<<"\n\ndata ke-"<<i+1;
+cout<<"\n\nnama="<<siswa[i].nama;
+cout<<"\n\nnilai="<<siswa[i].nilai;
+}
+return 0;
+}
+```
+
+Program menggunakan struct untuk mengelompokkan data nama dan nilai siswa, kemudian array digunakan untuk menyimpan data beberapa siswa.
+
+### 11\. ...
+
+```C++
+#include <iostream>
+using namespace std;
+
+float ctof(float celcius);
+int main() {
+float celcius, fahrenheit;
+cout <<"nilai Celcius? ";
+cin >> celcius;
+fahrenheit = ctof(celcius);
+cout<<celcius<<" Celcius adalah "<<fahrenheit<<" Fahrenheit"<<endl;
+return 0;
+}
+
+float ctof(float celcius){
+return (celcius * 1.8) + 32;
+}
+```
+
+Program menggunakan fungsi ctof() untuk mengubah suhu dari Celcius menjadi Fahrenheit berdasarkan nilai yang dimasukkan pengguna.
 
 ## Unguided
 
@@ -90,7 +304,7 @@ int main(){
 
 ![Screenshot Output Unguided 1_2](Output/Soal1_2.png)
 
-penjelasan unguided 1
+Melakukan operasi aritmatika dari dua bilangan yang dimasukkin oleh user. Kedua bilangannya digunakan untuk menghitung penjumlahan, pengurangan, dan perkalian.
 
 ### 2\. (Buatlah sebuah program yang menerima masukan angka dan mengeluarkan output nilai angka tersebut dalam bentuk tulisan. Angka yang akan di-input-kan user adalah bilangan bulat positif mulai dari 0 s.d 100\)
 
@@ -141,7 +355,7 @@ int main(){
 
 ![Screenshot Output Unguided 2_2](Output/Soal2_2.png)
 
-penjelasan unguided 2
+Mengubah angka 0-100 jadi tulisan. Programnya mengecek angka menggunakan if-else, lalu menampilkan kata yang sesuai, seperti 12 menjadi dua belas atau 25 jadi dua puluh lima. Kalo angka yang dimasukkin diluar 0_100, outputnya "Di luar jangkauan".  
 
 ### 3\. (Buatlah program yang dapat memberikan input dan output sbb.\)
 
@@ -185,7 +399,7 @@ int main(){
 
 ![Screenshot Output Unguided 3_2](Output/Soal3_2.png)
 
-penjelasan unguided 3
+pMembuat pola angka berdasarkan tinggi yang dimasukkan. Perulangan for digunakan untuk mengatur spasi dan susunan angka, kemudian tanda * diletakkan di bagian tengah setiap baris sehingga membentuk pola tertentu.  
 
 ## Kesimpulan
 
