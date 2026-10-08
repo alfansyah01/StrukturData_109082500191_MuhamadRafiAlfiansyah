@@ -13,31 +13,26 @@ C++ memiliki berbagai fitur yang dapat digunakan untuk mengolah data dan membagi
 #### 1. Array
 
 Array digunakan untuk menampung beberapa data yang memiliki tipe data sama dalam satu variabel. Setiap data di dalam array memiliki posisi yang disebut indeks. Pada C++, indeks array dimulai dari angka `0`.
-
 Array dapat dibuat dalam beberapa bentuk, seperti array satu dimensi dan array dua dimensi. Array satu dimensi cocok digunakan untuk menyimpan data dalam bentuk deretan, sedangkan array dua dimensi dapat digunakan untuk menyimpan data yang memiliki baris dan kolom, seperti sebuah tabel.
 
 #### 2. Pointer
 
 Pointer adalah variabel yang menyimpan alamat memori dari variabel lain. Alamat suatu variabel dapat diperoleh menggunakan operator `&`, sedangkan operator `*` digunakan untuk mengambil nilai yang berada pada alamat yang ditunjuk oleh pointer.
-
 Dengan pointer, sebuah program dapat mengakses maupun mengubah nilai variabel melalui alamat memorinya. Pointer juga memiliki hubungan dengan array karena alamat elemen pertama array dapat digunakan sebagai acuan untuk mengakses elemen lainnya.
 
 #### 3. Fungsi
 
 Fungsi merupakan bagian program yang dibuat untuk mengerjakan suatu proses tertentu. Dengan membagi program ke dalam beberapa fungsi, kode menjadi lebih teratur dan bagian yang sama tidak perlu ditulis berulang kali.
-
 Sebuah fungsi dapat menerima data melalui parameter dan dapat menghasilkan nilai yang dikembalikan menggunakan `return`. Tipe data pada fungsi menunjukkan jenis nilai yang akan dikembalikan.
 
 #### 4. Prosedur
 
 Prosedur merupakan bagian program yang digunakan untuk menjalankan suatu pekerjaan tanpa menghasilkan nilai balik. Dalam C++, prosedur umumnya dibuat menggunakan fungsi dengan tipe data `void`.
-
 Penggunaan prosedur dapat membantu memisahkan tugas tertentu dari bagian utama program sehingga kode menjadi lebih mudah dibaca dan dikelola.
 
 #### 5. Parameter Fungsi
 
 Parameter digunakan sebagai media untuk memasukkan data ke dalam fungsi ketika fungsi tersebut dipanggil. Parameter yang dituliskan pada pembuatan fungsi disebut parameter formal, sedangkan nilai atau variabel yang diberikan saat pemanggilan disebut parameter aktual.
-
 Dalam C++, parameter dapat diberikan dengan beberapa metode, yaitu `pass by value`, `pass by pointer`, dan `pass by reference`. Pada `pass by value`, fungsi menerima salinan dari nilai yang diberikan. Pada `pass by pointer`, fungsi menerima alamat dari variabel sehingga nilainya dapat diakses melalui pointer. Sementara itu, `pass by reference` membuat parameter mengacu langsung pada variabel asal.
 
 ## Guided
