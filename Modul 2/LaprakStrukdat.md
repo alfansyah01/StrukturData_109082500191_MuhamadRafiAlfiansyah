@@ -223,12 +223,12 @@ int main()
 
 ##### Output 1
 
-![Screenshot Output Unguided 1_1](Output/Unguided1#1.png)
+![Screenshot Output Unguided 1_1](Output/Unguided11.png)
 
 
 ##### Output 2
 
-![Screenshot Output Unguided 1_2](Output/Unguided1#2.png)
+![Screenshot Output Unguided 1_2](Output/Unguided12.png)
 
 Melakukan operasi aritmatika dari dua bilangan yang dimasukkin oleh user. Kedua bilangannya digunakan untuk menghitung penjumlahan, pengurangan, dan perkalian.
 
@@ -276,12 +276,12 @@ int main()
 
 ##### Output 1
 
-![Screenshot Output Unguided 2_1](Output/Unguided2#1.png)
+![Screenshot Output Unguided 2_1](Output/Unguided21.png)
 
 
 ##### Output 2
 
-![Screenshot Output Unguided 2_2](Output/Unguided2#2.png)
+![Screenshot Output Unguided 2_2](Output/Unguided22.png)
 
 Mengubah angka 0-100 jadi tulisan. Programnya mengecek angka menggunakan if-else, lalu menampilkan kata yang sesuai, seperti 12 menjadi dua belas atau 25 jadi dua puluh lima. Kalo angka yang dimasukkin diluar 0_100, outputnya "Di luar jangkauan".  
 
@@ -383,12 +383,12 @@ int main()
 
 ##### Output 1
 
-![Screenshot Output Unguided 3_1](Output/Unguided3#1.png)
+![Screenshot Output Unguided 3_1](Output/Unguided31.png)
 
 
 ##### Output 2
 
-![Screenshot Output Unguided 3_2](Output/Unguided3#2.png)
+![Screenshot Output Unguided 3_2](Output/Unguided32.png)
 
 Membuat pola angka berdasarkan tinggi yang dimasukkan. Perulangan for digunakan untuk mengatur spasi dan susunan angka, kemudian tanda * diletakkan di bagian tengah setiap baris sehingga membentuk pola tertentu.  
 
