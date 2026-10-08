@@ -76,7 +76,7 @@ int main()
 }
 ```
 
-Program menggunakan operator aritmatika dengan tanda kurung untuk mengatur urutan perhitungan dan menghasilkan nilai Z.
+Implementasi penggunaan array satu dan dua dimensi. Program minta input 5 nilai siswa untuk disimpan ke dalam array satu dimensi lalu menampilkannya kembali, serta menampilkan data nilai tahunan berukuran 5x5 yang tersimpan pada array dua dimensi.
 
 ### 2\. ...
 
@@ -102,7 +102,7 @@ int main(){
 }
 ```
 
-Program menggunakan ++r, yaitu nilai r ditambah terlebih dahulu sebelum digunakan dalam perhitungan.
+mendemonstrasikan konsep dasar pointer serta penggunaan operator alamat (&) dan dereference (*). Pointer px menyimpan alamat memori dari variabel x, sehingga nilai x dapat diakses dan disalin ke variabel y melalui pointer tersebut.
 
 ### 3\. ...
 
@@ -135,7 +135,7 @@ int maks3(int a, int b, int c){
 }
 ```
 
-Program menggunakan r++, yaitu nilai r digunakan terlebih dahulu dalam perhitungan, kemudian nilainya ditambah.
+menggunakan fungsi bertipe data int bernama maks3 untuk mencari nilai terbesar dari tiga buah bilangan bulat. Fungsi tersebut membandingkan ketiga masukan menggunakan struktur kondisi if-else dan mengembalikan nilai maksimum ke fungsi utama (main).
 
 ### 4\. ...
 
@@ -158,7 +158,7 @@ void tulis(int x){
 }
 ```
 
-Program menggunakan if untuk memberikan diskon sebesar 5% apabila total pembelian mencapai Rp100.000 atau lebih.
+menerapkan prosedur (fungsi bertipe void) bernama tulis untuk mencetak baris teks secara berulang. Prosedur menerima parameter masukan berupa jumlah baris, lalu menggunakan perulangan for untuk menampilkan output tanpa mengembalikan nilai balik.
 
 ### 5\. ...
 
@@ -194,7 +194,7 @@ void tukar(int *x, int *y)
 }
 ```
 
-Program menggunakan if-else untuk menentukan diskon. Jika total pembelian memenuhi syarat, diberikan diskon 5%, jika tidak maka diskon bernilai 0.
+mendemonstrasikan metode pass by pointer pada prosedur tukar untuk menukarkan nilai dua variabel (a dan b). Alamat memori variabel dikirimkan sebagai parameter sehingga penukaran nilai yang dilakukan di dalam prosedur secara langsung mengubah nilai variabel asli pada fungsi main.
 
 ## Unguided
 
@@ -230,7 +230,7 @@ int main()
 
 ![Screenshot Output Unguided 1_2](Output/Unguided12.png)
 
-Melakukan operasi aritmatika dari dua bilangan yang dimasukkin oleh user. Kedua bilangannya digunakan untuk menghitung penjumlahan, pengurangan, dan perkalian.
+melakukan operasi aritmatika matriks 3x3 yang meliputi penjumlahan, pengurangan, dan perkalian. user masukkan elemen matriks A dan matriks B, kemudian program menghitung penjumlahan dan pengurangan elemen seletak serta operasi perkalian matriks menggunakan perulangan bersarang.
 
 ### 2\. (Berdasarkan guided pointer dan reference sebelumnya, buatlah keduanya dapat menukar nilai dari 3 variabel.\)
 
@@ -283,7 +283,7 @@ int main()
 
 ![Screenshot Output Unguided 2_2](Output/Unguided22.png)
 
-Mengubah angka 0-100 jadi tulisan. Programnya mengecek angka menggunakan if-else, lalu menampilkan kata yang sesuai, seperti 12 menjadi dua belas atau 25 jadi dua puluh lima. Kalo angka yang dimasukkin diluar 0_100, outputnya "Di luar jangkauan".  
+melakukan penukaran nilai dari tiga variabel (a, b, dan c) menggunakan dua metode, yaitu call by pointer (tukarPointer) dan call by reference (tukarReference). Kedua prosedur menerima alamat memori atau referensi dari variabel asli sehingga perubahan urutan nilai variabel di dalam fungsi secara langsung memengaruhi nilai variabel pada fungsi utama.
 
 ### 3\. (Diketahui sebuah array 1 dimensi sebagai berikut : arrA = {48, 2, 7 , 21, 5, 20, 77, 9, 10, 1}. Buatlah program yang dapat mencari nilai minimum, maksimum, dan rata – rata dari array tersebut!\)
 
@@ -390,11 +390,11 @@ int main()
 
 ![Screenshot Output Unguided 3_2](Output/Unguided32.png)
 
-Membuat pola angka berdasarkan tinggi yang dimasukkan. Perulangan for digunakan untuk mengatur spasi dan susunan angka, kemudian tanda * diletakkan di bagian tengah setiap baris sehingga membentuk pola tertentu.  
+menyediakan menu interaktif untuk mengolah data dari array satu dimensi yang terdiri dari 10 elemen. Program memanfaatkan fungsi-fungsi terpisah untuk menampilkan elemen array (tampilkanArray), menentukan nilai tertinggi (nilaiMaksimum), mencari nilai terendah (nilaiMinimum), serta menghitung nilai rata-rata (hitungRataRata). 
 
 ## Kesimpulan
 
-Saya mempelajari dasar dari c++ seperti perator aritmatika, percabangan, perulangan, struct, array, dan fungsi. Masih butuh penyesuaian dari semester sebelumnya yang menggunakan Go, apalagi di panggunaan operator dan penulisan sintaksnya yang beda. Dari praktikum ini saya jadi lebih bisa memahami tentang c++.
+Pada praktikum Modul 2 ini memberikan pemahaman meliputi penggunaan array satu dimensi dan dua dimensi untuk penyimpanan data berurutan, penerapan pointer dan alamat memori, pemisahan logika program menggunakan fungsi dan prosedur, serta pengiriman data melalui berbagai jenis parameter (pass by value, pass by pointer, dan pass by reference).
 
 ## Referensi
 
