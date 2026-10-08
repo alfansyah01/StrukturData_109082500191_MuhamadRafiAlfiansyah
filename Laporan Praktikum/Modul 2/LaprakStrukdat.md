@@ -41,13 +41,38 @@ Dalam C++, parameter dapat diberikan dengan beberapa metode, yaitu `pass by valu
 
 ```C++
 #include <iostream>
+#define MAX 5
 using namespace std;
-int main(){
-int W, X, Y; float Z;
-X = 7; Y = 3; W = 1;
-Z = (X + Y)/(Y + W);
-cout<< "Nilai z = " << Z << endl;
-return 0;
+int main()
+{
+    int i, j;
+    float nilai_total, rata_rata;
+    float nilai[MAX];
+    static int nilai_tahun[MAX][MAX] =
+        {{0, 2, 2, 0, 0},
+         {0, 1, 1, 1, 0},
+         {0, 3, 3, 3, 0},
+         {4, 4, 0, 0, 4},
+         {5, 0, 0, 0, 5}};
+    /*inisialisasi array dua dimensi */
+    for (i = 0; i < MAX; i++)
+    {
+        cout << "masukkan nilai ke-" << i + 1 << endl;
+        cin >> nilai[i];
+    }
+    cout << "\ndata nilai siswa :\n";
+    /*menampilkan array satu dimensi */
+    for (i = 0; i < MAX; i++)
+        cout << "nilai k-" << i + 1 << "=" << nilai[i] << endl;
+    cout << "\n nilai tahunan : \n";
+    /* menampilkan array dua dimensi */
+    for (i = 0; i < MAX; i++)
+    {
+        for (j = 0; j < MAX; j++)
+            cout << nilai_tahun[i][j];
+        cout << "\n";
+    }
+    return 0;
 }
 ```
 
@@ -58,13 +83,22 @@ Program menggunakan operator aritmatika dengan tanda kurung untuk mengatur uruta
 ```C++
 #include <iostream>
 using namespace std;
+
 int main(){
-int r = 10;
-int s;
-s=10 + ++r;
-cout<< "Nilai r= "<<r<<endl;
-cout<< "Nilai s= "<<s<<endl;
-return 0;
+    int x, y;
+    int *px;
+
+    x = 87;
+    px = &x;
+    y = *px;
+
+    cout << "Alamat x = " << &x << endl;
+    cout << "Isi px = " << px << endl;
+    cout << "Isi x = " << x << endl;
+    cout << "Nilai yang ditunjuk px= " << *px << endl;
+    cout << "Nilai y= " << y << endl;
+
+    return 0;
 }
 ```
 
@@ -74,15 +108,30 @@ Program menggunakan ++r, yaitu nilai r ditambah terlebih dahulu sebelum digunaka
 
 ```C++
 #include <iostream>
-#include <stdlib.h>
 using namespace std;
-int main(){
-int r = 10;
-int s;
-s=10 + r++;
-cout<< "Nilai r= "<<r<<endl;
-cout<< "Nilai s= "<<s<<endl;
-return 0;
+
+int maks3(int a, int b, int c);
+int main (){
+    int x,y,z;
+    cout << "masukkan nilai bilangan ke-1= ";
+    cin >> x;
+    cout << "masukkan nilai bilangan ke-2= ";
+    cin >> y;
+    cout << "masukkan nilai bilangan ke-3= ";
+    cin >> z;
+    cout << "nilai maksimum adalah= " << maks3(x,y,z) << endl;
+    return 0;
+}
+
+int maks3(int a, int b, int c){
+    int temp_maks;
+    if (a > b && a > c)
+        temp_maks = a;
+    else if (b > a && b > c)
+        temp_maks = b;
+    else
+        temp_maks = c;
+    return temp_maks;
 }
 ```
 
@@ -93,14 +142,19 @@ Program menggunakan r++, yaitu nilai r digunakan terlebih dahulu dalam perhitung
 ```C++
 #include <iostream>
 using namespace std;
+
+void tulis(int x);
 int main(){
-double tot_pembelian, diskon;
-cout<<"total pembelian: Rp";
-cin>>tot_pembelian;
-diskon = 0;
-if(tot_pembelian >= 100000)
-diskon = 0.05*tot_pembelian;
-cout<<"besar diskon = Rp" <<diskon;
+    int jum;
+    cout << "jumlah bari kata = ";
+    cin >> jum;
+    tulis(jum);
+    return 0;
+}
+
+void tulis(int x){
+    for (int i = 1; i <= x; i++)
+        cout << "baris ke-" << i << endl;
 }
 ```
 
@@ -111,165 +165,36 @@ Program menggunakan if untuk memberikan diskon sebesar 5% apabila total pembelia
 ```C++
 #include <iostream>
 using namespace std;
-int main(){
-double tot_pembelian, diskon;
-cout<<"total pembelian: Rp";
-cin>>tot_pembelian;
-diskon = 0;
-if(tot_pembelian >= 100000)
-diskon = 0.05*tot_pembelian;
-else
-diskon = 0;
-cout<<"besar diskon = Rp" <<diskon;
+
+void tukar(int *x, int *y);
+
+int main()
+{
+    int a, b;
+    a = 4;
+    b = 6;
+    cout << "kondisi sebelum ditukar \n";
+    cout << "a = " << a << " b = " << b << endl;
+
+    tukar(&a, &b);
+
+    cout << "kondisi setelah ditukar \n";
+    cout << "a= " << a << " b = " << b << endl;
+    return 0;
+}
+
+void tukar(int *x, int *y)
+{
+    int temp;
+    temp = *x;
+    *x = *y;
+    *y = temp;
+    cout << "nilai akhir pada fungsi tukar \n";
+    cout << " x = " << *x << " y = " << *y << endl;
 }
 ```
 
 Program menggunakan if-else untuk menentukan diskon. Jika total pembelian memenuhi syarat, diberikan diskon 5%, jika tidak maka diskon bernilai 0.
-
-### 6\. ...
-
-```C++
-#include <iostream>
-using namespace std;
-int main(){
-int kode_hari;
-puts("Menentukan hari kerja/libur\n");
-puts("1=Senin 3=Rabu 5=Jumat 7=Minggu ");
-puts("2=Selasa 4=Kamis 6=Sabtu ");
-cin>>kode_hari;
-switch(kode_hari){
-case 1:
-case 2:
-case 3:
-case 4:
-case 5:
-cout<<"Hari Kerja"<<endl;
-break;
-case 6:
-case 7:
-cout<<"Hari Libur"<<endl;
-break;
-default:
-cout<<"Kode masukan salah!!!"<<endl;
-}
-return 0;
-}
-```
-
-Program menggunakan switch untuk menentukan keterangan hari berdasarkan kode. Kode 1–5 menunjukkan hari kerja, sedangkan 6–7 menunjukkan hari libur.
-
-### 7\. ...
-
-```C++
-#include <iostream>
-using namespace std;
-int main(){
-int jum;
-cout<<"jumlah perulangan: ";
-cin>>jum;
-for(int i=0; i<jum; i++){
-cout<<"saya pintar\n";
-}
-return 0;
-}
-```
-
-Program menggunakan for untuk mengulang perintah menampilkan tulisan sebanyak jumlah perulangan yang dimasukkan oleh pengguna.
-
-### 8\. ...
-
-```C++
-#include <iostream>
-using namespace std;
-int main(){
-int i=1;
-int jum;
-cout<<"masukan banyak baris: ";
-cin>>jum;
-while(i<=jum){
-cout<<"baris ke-"<<i<<endl;
-i++; 
-}
-return 0;
-}
-```
-
-Program menggunakan while untuk menampilkan nomor baris secara berulang selama kondisi i <= jum masih terpenuhi.
-
-### 9\. ...
-
-```C++
-#include <iostream>
-using namespace std;
-int main(){
-int i = 1;
-int jum;
-cin >> jum;
-do{
-cout << "baris ke-" <<(i+1)<<endl;
-i++;
-} while(i<jum);
-return 0;
-}
-```
-
-Program menggunakan do-while untuk menjalankan perintah terlebih dahulu, kemudian memeriksa kondisi perulangan pada bagian while.
-
-### 10\. ...
-
-```C++
-#include <iostream>
-#define MAX 5
-using namespace std;
-int main(){
-int i;
-struct data{
-char nama[40];
-int nilai;
-};
-data siswa[MAX];
-for(i=0; i<MAX; i++){
-cout<<"masukkan data ke-"<<i+1<<endl;
-cout<<"nama = ";
-cin>>siswa[i].nama;
-cout<<"nilai = ";
-cin>>siswa[i].nilai;
-}
-cout<<"\ndata siswa\n";
-cout<<"=======";
-for(i=0; i<MAX; i++){
-cout<<"\n\ndata ke-"<<i+1;
-cout<<"\n\nnama="<<siswa[i].nama;
-cout<<"\n\nnilai="<<siswa[i].nilai;
-}
-return 0;
-}
-```
-
-Program menggunakan struct untuk mengelompokkan data nama dan nilai siswa, kemudian array digunakan untuk menyimpan data beberapa siswa.
-
-### 11\. ...
-
-```C++
-#include <iostream>
-using namespace std;
-
-float ctof(float celcius);
-int main() {
-float celcius, fahrenheit;
-cout <<"nilai Celcius? ";
-cin >> celcius;
-fahrenheit = ctof(celcius);
-cout<<celcius<<" Celcius adalah "<<fahrenheit<<" Fahrenheit"<<endl;
-return 0;
-}
-
-float ctof(float celcius){
-return (celcius * 1.8) + 32;
-}
-```
-
-Program menggunakan fungsi ctof() untuk mengubah suhu dari Celcius menjadi Fahrenheit berdasarkan nilai yang dimasukkan pengguna.
 
 ## Unguided
 
