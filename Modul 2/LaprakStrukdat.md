@@ -198,21 +198,23 @@ Program menggunakan if-else untuk menentukan diskon. Jika total pembelian memenu
 
 ## Unguided
 
-### 1\. (Buatlah program yang menerima input-an dua buah bilangan betipe float, kemudian memberikan output-an hasil penjumlahan, pengurangan, perkalian, dan pembagian dari dua bilangan tersebut.\)
+### 1\. (Buatlah program yang dapat melakukan operasi penjumlahan, pengurangan, dan perkalian matriks 3x3.\)
 
 ```cpp
 #include <iostream>
 using namespace std;
 
-int main(){
-    float Pertama, Kedua;
-    cout << "Masukkin bilangan pertama: ";
-    cin >> Pertama;
-    cout << "Masukkin bilangan kedua: ";
-    cin >> Kedua;
-    cout << "Penjumlahan = " << Pertama + Kedua << endl;
-    cout << "Pengurangan = " << Pertama - Kedua << endl;
-    cout << "Perkalian   = " << Pertama * Kedua << endl;
+int main()
+{
+    float a, b;
+    cout << "bil pertama = ";
+    cin >> a;
+    cout << "bil kedua = ";
+    cin >> b;
+    cout << "Hasil penjumlahan = " << a + b << endl;
+    cout << "Hasil pengurangan = " << a - b << endl;
+    cout << "Hasil perkalian = " << a * b << endl;
+    cout << "Hasil pembagian = " << a / b << endl;
     return 0;
 }
 ```
@@ -221,49 +223,51 @@ int main(){
 
 ##### Output 1
 
-![Screenshot Output Unguided 1_1](Output/Soal1_1.png)
+![Screenshot Output Unguided 1_1](Output/Unguided1#1.png)
 
 
 ##### Output 2
 
-![Screenshot Output Unguided 1_2](Output/Soal1_2.png)
+![Screenshot Output Unguided 1_2](Output/Unguided1#2.png)
 
 Melakukan operasi aritmatika dari dua bilangan yang dimasukkin oleh user. Kedua bilangannya digunakan untuk menghitung penjumlahan, pengurangan, dan perkalian.
 
-### 2\. (Buatlah sebuah program yang menerima masukan angka dan mengeluarkan output nilai angka tersebut dalam bentuk tulisan. Angka yang akan di-input-kan user adalah bilangan bulat positif mulai dari 0 s.d 100\)
+### 2\. (Berdasarkan guided pointer dan reference sebelumnya, buatlah keduanya dapat menukar nilai dari 3 variabel.\)
 
 ```cpp
 #include <iostream>
-#include <string>
 using namespace std;
 
-int main(){
-    string satuan[10] = {"nol", "satu", "dua", "tiga", "empat",
-                         "lima", "enam", "tujuh", "delapan", "sembilan"};
-    int n;
+void tukarValue(int x, int y, int z)
+{
+    int temp = x;
+    x = y;
+    y = z;
+    z = temp;
+}
 
-    cout << "Masukkin angka (0-100): ";
-    cin >> n;
-
-    if (n < 0 || n > 100){
-        cout << "Di luar jangkauan" << endl;
-    } else if (n == 100){
-        cout << "seratus" << endl;
-    } else if (n < 10){
-        cout << satuan[n] << endl;
-    } else if (n == 10){
-        cout << "sepuluh" << endl;
-    } else if (n == 11){
-        cout << "sebelas" << endl;
-    } else if (n < 20){
-        cout << satuan[n % 10] << " belas" << endl;
-    } else {
-        cout << satuan[n / 10] << " puluh";
-        if (n % 10 != 0)
-            cout << " " << satuan[n % 10];
-        cout << endl;
-    }
-
+void tukarPointer(int *x, int *y, int *z)
+{
+    int temp = *x;
+    *x = *y;
+    *y = *z;
+    *z = temp;
+}
+void tukarReference(int &x, int &y, int &z)
+{
+    int temp = x;
+    x = y;
+    y = z;
+    z = temp;
+}
+int main()
+{
+    int a = 4, b = 6, c = 1;
+    cout << "Sebelum ditukar           -> a = " << a << ", b = " << b << ", c = " << c << " (Tetap)" << endl;
+    tukarPointer(&a, &b, &c);
+    cout << "Setelah Call by Pointer   -> a = " << a << ", b = " << b << ", c = " << c << " (Berubah)" << endl;
+    tukarReference(a, b, c);
+    cout << "Setelah Call by Reference -> a = " << a << ", b = " << b << ", c = " << c << " (Berubah lagi)" << endl;
     return 0;
 }
 ```
@@ -272,41 +276,104 @@ int main(){
 
 ##### Output 1
 
-![Screenshot Output Unguided 2_1](Output/Soal2_1.png)
+![Screenshot Output Unguided 2_1](Output/Unguided2#1.png)
 
 
 ##### Output 2
 
-![Screenshot Output Unguided 2_2](Output/Soal2_2.png)
+![Screenshot Output Unguided 2_2](Output/Unguided2#2.png)
 
 Mengubah angka 0-100 jadi tulisan. Programnya mengecek angka menggunakan if-else, lalu menampilkan kata yang sesuai, seperti 12 menjadi dua belas atau 25 jadi dua puluh lima. Kalo angka yang dimasukkin diluar 0_100, outputnya "Di luar jangkauan".  
 
-### 3\. (Buatlah program yang dapat memberikan input dan output sbb.\)
+### 3\. (Diketahui sebuah array 1 dimensi sebagai berikut : arrA = {48, 2, 7 , 21, 5, 20, 77, 9, 10, 1}. Buatlah program yang dapat mencari nilai minimum, maksimum, dan rata – rata dari array tersebut!\)
 
 ```cpp
+#include <iomanip>
 #include <iostream>
 using namespace std;
 
-int main(){
-    int tinggi;
+const int JUMLAH_DATA = 10;
 
-    cout << "Input : ";
-    cin >> tinggi;
-
-    cout << "Output :" << endl;
-    for (int baris = 0; baris <= tinggi; baris++){
-        for (int spasi = 0; spasi < baris; spasi++){
-            cout << "  ";
+int nilaiMaksimum(const int data[], int jumlah)
+{
+    int maksimum = data[0];
+    for (int indeks = 1; indeks < jumlah; indeks++)
+    {
+        if (data[indeks] > maksimum)
+        {
+            maksimum = data[indeks];
         }
-        for (int angka = tinggi - baris; angka >= 1; angka--){
-            cout << angka << " ";
-        }
-        cout << "* ";
-        for (int angka = 1; angka <= tinggi - baris; angka++){
-            cout << angka << " ";
-        }
-        cout << endl;
     }
+    return maksimum;
+}
+
+int nilaiMinimum(const int data[], int jumlah)
+{
+    int minimum = data[0];
+    for (int indeks = 1; indeks < jumlah; indeks++)
+    {
+        if (data[indeks] < minimum)
+        {
+            minimum = data[indeks];
+        }
+    }
+    return minimum;
+}
+
+void hitungRataRata(const int data[], int jumlah, double &rataRata)
+{
+    int total = 0;
+    for (int indeks = 0; indeks < jumlah; indeks++)
+    {
+        total += data[indeks];
+    }
+    rataRata = static_cast<double>(total) / jumlah;
+}
+
+void tampilkanArray(const int data[], int jumlah)
+{
+    for (int indeks = 0; indeks < jumlah; indeks++)
+    {
+        cout << data[indeks] << (indeks == jumlah - 1 ? '\n' : ' ');
+    }
+}
+
+int main()
+{
+    const int data[JUMLAH_DATA] = {48, 2, 7, 21, 5, 20, 77, 9, 10, 1};
+    int pilihan;
+    double rataRata = 0;
+
+    do
+    {
+        cout << "\n--- Menu Program Array ---\n";
+        cout << "1. Tampilkan isi array\n";
+        cout << "2. Cari nilai maksimum\n";
+        cout << "3. Cari nilai minimum\n";
+        cout << "4. Hitung nilai rata-rata\n";
+        cout << "Pilihan: ";
+        cin >> pilihan;
+
+        switch (pilihan)
+        {
+        case 1:
+            tampilkanArray(data, JUMLAH_DATA);
+            break;
+        case 2:
+            cout << "Nilai maksimum = " << nilaiMaksimum(data, JUMLAH_DATA) << endl;
+            break;
+        case 3:
+            cout << "Nilai minimum = " << nilaiMinimum(data, JUMLAH_DATA) << endl;
+            break;
+        case 4:
+            hitungRataRata(data, JUMLAH_DATA, rataRata);
+            cout << fixed << setprecision(2);
+            cout << "Nilai rata-rata = " << rataRata << endl;
+            break;
+        default:
+            cout << "Pilihan tidak tersedia." << endl;
+        }
+    }while (pilihan >= 1 && pilihan <= 4);
 
     return 0;
 }
@@ -316,12 +383,12 @@ int main(){
 
 ##### Output 1
 
-![Screenshot Output Unguided 3_1](Output/Soal3_1.png)
+![Screenshot Output Unguided 3_1](Output/Unguided3#1.png)
 
 
 ##### Output 2
 
-![Screenshot Output Unguided 3_2](Output/Soal3_2.png)
+![Screenshot Output Unguided 3_2](Output/Unguided3#2.png)
 
 Membuat pola angka berdasarkan tinggi yang dimasukkan. Perulangan for digunakan untuk mengatur spasi dan susunan angka, kemudian tanda * diletakkan di bagian tengah setiap baris sehingga membentuk pola tertentu.  
 
